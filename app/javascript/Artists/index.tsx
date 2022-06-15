@@ -1,17 +1,15 @@
 import React from 'react'
+import gql from 'graphql-tag'
+import {useQuery} from '@apollo/client'
+import {withProvider} from '../graphqlProvider'
 
-const data = {
-  artists: [
-    {
-      id: '1',
-      name: 'Nirvana',
-    },
-    {
-      id: '2',
-      name: 'The Police',
-    },
-  ],
-}
+const artistsQuery = gql`
+  query allArtists {
+    artists {
+      name
+    }
+  }
+`
 
 const loading = false
 
@@ -20,6 +18,7 @@ const Artist: React.FunctionComponent = ({name}) => {
 }
 
 const Artists = () => {
+  const {data, loading, error} = useQuery(artistsQuery)
   if (loading) {
     return <span>"Loading..."</span>
   }
@@ -35,4 +34,4 @@ const Artists = () => {
   )
 }
 
-export default Artists
+export default withProvider(Artists)
