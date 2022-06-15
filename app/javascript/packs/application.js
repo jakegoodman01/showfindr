@@ -15,6 +15,9 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-import mount from '../mount'
 import Hello from './hello_react'
-mount({Hello})
+
+import mount from '../mount'
+import Artists from '../Artists'
+
+mount({ Hello, Artists })
