@@ -43,6 +43,12 @@ module.exports = function(api) {
           development: isDevelopmentEnv || isTestEnv,
           useBuiltIns: true
         }
+      ],
+      [
+        '@babel/preset-typescript',
+        {
+          allowNamespaces: true
+        }
       ]
     ].filter(Boolean),
     plugins: [
