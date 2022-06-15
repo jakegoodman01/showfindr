@@ -1,5 +1,7 @@
 # README
 
+Whenever you update the graphql schema, run `rake graphql:schema:dump && yarm gql:codegen`
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
