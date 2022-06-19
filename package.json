@@ -3,20 +3,23 @@
     "@apollo/client": "^3.6.8",
     "@babel/preset-react": "^7.17.12",
     "@babel/preset-typescript": "^7.17.12",
-    "@rails/webpacker": "5.4.3",
+    "@rails/webpacker": "^5.1.1",
     "graphql": "^16.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.7.3",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^4.10.0"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "2.6.2",
-    "webpack-dev-server": "^3",
+    "@graphql-codegen/typescript": "2.5.1",
     "@graphql-codegen/typescript-operations": "2.4.2",
     "@graphql-codegen/typescript-react-apollo": "3.2.16",
-    "@graphql-codegen/typescript": "2.5.1"
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint": "^8.18.0",
+    "typescript": "^4.7.4",
+    "webpack": "^5.73.0",
+    "webpack-dev-server": "^4"
   },
   "scripts": {
     "gql:codegen": "graphql-codegen --config codegen.yml"
