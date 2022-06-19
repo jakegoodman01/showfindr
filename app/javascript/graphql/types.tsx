@@ -39,12 +39,13 @@ export type Query = {
 export type AllArtistsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type AllArtistsQuery = { __typename?: 'Query', artists: Array<{ __typename?: 'Artist', name?: string | null }> };
+export type AllArtistsQuery = { __typename?: 'Query', artists: Array<{ __typename?: 'Artist', id: string, name?: string | null }> };
 
 
 export const AllArtistsDocument = gql`
     query allArtists {
   artists {
+    id
     name
   }
 }
